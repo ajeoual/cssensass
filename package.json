@@ -1,0 +1,17 @@
+{
+  "name": "config_cssensass",
+  "version": "1.0.0",
+  "description": "command line configuration for cssensass app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandre Rousseau",
+  "license": "ISC",
+  "bin": {
+    "cssensass": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
