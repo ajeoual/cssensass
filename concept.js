@@ -1,8 +1,11 @@
+var set = require('./jshashset');
+var extents = require('./fcaelement');
+
 function Concept() {
-	this.parents = new Set();
-	this.children = new Set();
-	this.extents = new Set();
-	this.intents = new Set();
+	this.parents = set.HashSet();
+	this.children = set.HashSet();
+	this.extents = set.HashSet();
+	this.intents = set.HashSet();
 
 	this.addParent = function(concept){
 		this.parents.add(concept);
@@ -15,13 +18,13 @@ function Concept() {
 	}
 
 	this.removeParent = function(concept){
-		this.parents.delete(concept);
-		concept.children.delete(this);
+		this.parents.remove(concept);
+		concept.children.remove(this);
 	}
 
 	this.removeChild = function(concept){
-		this.children.delete(concept);
-		concept.parents.delete(this);
+		this.children.remove(concept);
+		concept.parents.remove(this);
 	}
 
 	this.getParents = function(){
@@ -41,7 +44,7 @@ function Concept() {
 	}
 
 	this.getSimplifiedExtents = function() {
-		this.simplifiedExtents = new Set();
+		this.simplifiedExtents = set.HashSet();
 		this.getExtents().
 	}
 
