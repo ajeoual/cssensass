@@ -2,6 +2,7 @@
 
 console.log('Hello user, welcome on CssenSass !');
 var program = require('commander');
+var cssparser = require('css');
 var fs = require('fs'),
 	status;
 

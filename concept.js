@@ -1,4 +1,4 @@
-var set = require('./jshashset');
+var set = require('./hashset');
 var extents = require('./fcaelement');
 
 function Concept() {
@@ -15,7 +15,7 @@ function Concept() {
 	this.addChild = function(concept){
 		this.children.add(concept);
 		concept.parents.add(this);
-	}
+	}	
 
 	this.removeParent = function(concept){
 		this.parents.remove(concept);
@@ -45,7 +45,7 @@ function Concept() {
 
 	this.getSimplifiedExtents = function() {
 		this.simplifiedExtents = set.HashSet();
-		this.getExtents().
+		this.getExtents();
 	}
 
 }
